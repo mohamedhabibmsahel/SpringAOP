@@ -35,7 +35,7 @@ pipeline{
                 }
                 
             }
-               /* stage('mvn clean package') {
+                stage('mvn clean package') {
                                steps {
                                  sh 'mvn clean package'
                             }
@@ -45,7 +45,7 @@ pipeline{
                 sh 'mvn deploy -DskipTests'
             }
         }
-        stage("Building Docker Image") {
+       /* stage("Building Docker Image") {
                 steps{
                     sh 'docker build -t ghazidev/achat .'
                 }

@@ -29,9 +29,9 @@ pipeline{
          stage('SonarQube Analysis'){
                 steps {
                     sh "mvn sonar:sonar \
-                           -Dsonar.projectKey=sonar \
-                           -Dsonar.host.url=http://192.168.33.10:9000 \
-                           -Dsonar.login=092bfe111b6a8e26f3dacd0d45543eb5bd1b8af3"
+  -Dsonar.projectKey=sonar \
+  -Dsonar.host.url=http://192.168.33.10:9000 \
+  -Dsonar.login=59334a89cf799573fbd700f29abe532b42650498"
                 }
                 
             }

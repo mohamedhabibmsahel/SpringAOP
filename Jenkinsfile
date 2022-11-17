@@ -15,16 +15,16 @@ pipeline{
                      sh 'mvn compile'
                  }
               }
-                stage('mvn Test') {
-                  steps {
-                     sh 'mvn test'
-                  }
-              }
-                stage('mvn Verify') {
-                   steps {
-                     sh 'mvn verify'
-                }
-             }
+            //     stage('mvn Test') {
+            //       steps {
+            //          sh 'mvn test'
+            //       }
+            //   }
+            //     stage('mvn Verify') {
+            //        steps {
+            //          sh 'mvn verify'
+            //     }
+            //  }
 
          stage('SonarQube Analysis'){
                 steps {

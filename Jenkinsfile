@@ -31,7 +31,7 @@ pipeline{
                     sh "mvn sonar:sonar \
   -Dsonar.projectKey=sonar \
   -Dsonar.host.url=http://192.168.33.10:9000 \
-  -Dsonar.login=59334a89cf799573fbd700f29abe532b42650498"
+  -Dsonar.login=b363068e908831f3c25a2c783bdadb206cb77bfb"
                 }
                 
             }
@@ -45,22 +45,22 @@ pipeline{
                 sh 'mvn deploy -DskipTests'
             }
         }
-       /* stage("Building Docker Image") {
+        stage("Building Docker Image") {
                 steps{
-                    sh 'docker build -t ghazidev/achat .'
+                    sh 'docker build -t mohamedhabibmsahel123/achat .'
                 }
         }
      
          stage("Login to DockerHub") {
                 steps{
                    // sh 'sudo chmod 666 /var/run/docker.sock'
-                    sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u ghazidev -p Docker.Hub.147'
+                    sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u mohamedhabibmsahel123 -p juka98473912azerty'
                 }
         }
         
         stage("Push to DockerHub") {
                 steps{
-                    sh 'docker push ghazidev/achat'
+                    sh 'docker push mohamedhabibmsahel123/achat'
                 }
         }
     
@@ -68,7 +68,7 @@ pipeline{
                 steps{
                     sh 'docker-compose up -d'
                 }
-        }*/
+        }
     }
       
     }
